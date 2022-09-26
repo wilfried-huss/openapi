@@ -16,10 +16,10 @@ import collections.abc
 from contextlib import closing
 import jsonschema
 import yaml
-try:
-    from m2r import convert as convert_markdown
-except ImportError:
-    convert_markdown = None
+# try:
+#     from m2r import convert as convert_markdown
+# except ImportError:
+#     convert_markdown = None
 
 from urllib.parse import urlsplit
 from urllib.request import urlopen
