@@ -269,7 +269,7 @@ def _httpresource(endpoint, method, properties, convert, render_examples,
     # print request's path params
     for param in filter(lambda p: p['in'] == 'path', parameters):
         yield indent + ':param {type} {name}:'.format(
-            type=param['schema']['type'],
+            type=param['schema'].get('type', None),
             name=param['name'])
 
         for line in convert(param.get('description', '')).splitlines():
